@@ -2,10 +2,8 @@
 --Create Database
 
 CREATE DATABASE RetailRocket_Product_Analytics;
-GO
 
 USE RetailRocket_Product_Analytics;
-GO
 
 -- Drop Existing Tables (IF EXISTS)
 
