@@ -1,1 +1,1 @@
-# ProductIQ-Customer-Product-Analytics-Platform-
+•	Product Analytics: Customer Journey & Conversion Optimization 
