@@ -874,7 +874,11 @@ This repository showcases practical skills expected of Product Analysts, Busines
 
 # Contact
 **Vansh Gupta**
+
 Engineering Physics, Delhi Technological University (DTU)
+
 **LinkedIn:*https://www.linkedin.com/in/vansh-guptaa/*
+
 **Email:** *vansh9999gupta@gmail.com*
+
 ###If you found this project useful, consider giving the repository a ⭐.
