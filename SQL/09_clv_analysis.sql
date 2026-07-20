@@ -33,13 +33,13 @@ WITH CLV AS
 (
 SELECT visitor_id, COUNT(transaction_id) AS Estimated_CLV 
 FROM events WHERE transaction_id IS NOT NULL
-GROUP BY visitor_id;
+GROUP BY visitor_id
 )
 
 SELECT CASE WHEN Estimated_CLV>=20 THEN 'Premium' WHEN Estimated_CLV BETWEEN 10 AND 19 THEN 'High Value' WHEN Estimated_CLV BETWEEN 5 AND 9 THEN 'Medium Value' WHEN Estimated_CLV BETWEEN 2 AND 4 THEN 'Low Value' ELSE 'One-Time' END AS Customer_Value,
 COUNT(*) AS Customers 
 FROM CLV
-GROUP BY WHEN Estimated_CLV>=20 THEN 'Premium' WHEN Estimated_CLV BETWEEN 10 AND 19 THEN 'High Value' WHEN Estimated_CLV BETWEEN 5 AND 9 THEN 'Medium Value' WHEN Estimated_CLV BETWEEN 2 AND 4 THEN 'Low Value' ELSE 'One-Time' END 
+GROUP BY CASE WHEN Estimated_CLV>=20 THEN 'Premium' WHEN Estimated_CLV BETWEEN 10 AND 19 THEN 'High Value' WHEN Estimated_CLV BETWEEN 5 AND 9 THEN 'Medium Value' WHEN Estimated_CLV BETWEEN 2 AND 4 THEN 'Low Value' ELSE 'One-Time' END 
 ORDER BY Customers DESC;
 
 
